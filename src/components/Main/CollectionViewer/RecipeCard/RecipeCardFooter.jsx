@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function RecipeCardFooter(props) {
   return (
     <div>
-      <h4>props.title</h4>
+      <h4>{props.title}</h4>
     </div>
   );
 }

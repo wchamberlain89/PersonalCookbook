@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import brookie from '../../../../assets/imgs/img1.jpg';
 
-function RecipeCardImg(props) {
+function RecipeCardImg() {
   const styles = {
     width: '100%'
   };
 
   return (
     <div>
-      <img style={styles} src={require(`../../../../assets/imgs/${props.img}`)}/>
+      <img style={styles} src={brookie}/>
     </div>
   );
 }

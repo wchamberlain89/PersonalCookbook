@@ -9,7 +9,7 @@ import CollectionViewer from './Main/CollectionViewer/CollectionViewer';
 
 function App(){
   return (
-    <div>
+    <div style={{display: "flex"}}>
       <style jsx global>
         {`
       * {

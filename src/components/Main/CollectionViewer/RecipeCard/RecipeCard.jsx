@@ -10,7 +10,7 @@ function RecipeCard() {
 
   return (
     <div style={styles}>
-      <RecipeCardImg image='img1.jpg'/>
+      <RecipeCardImg/>
       <RecipeCardFooter title='Praline Brownies'/>
     </div>
   );
