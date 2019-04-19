@@ -4,7 +4,8 @@ import brookie from '../../../../assets/imgs/img1.jpg';
 
 function RecipeCardImg() {
   const styles = {
-    width: '100%',
+    width: '300px',
+    height: '300px',
     overflow: 'hidden',
   };
 

@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 
 function RecipeCardFooter(props) {
   const styles = {
-    padding: "5px 0px",
+    padding: "10px 0px",
     textAlign: "center",
-    fontSize: "1em"
+    fontSize: "1.3em"
   }
   const borderStyles = {
     borderBottomLeftRadius: "10px",
     borderBottomRightRadius: "10px",
     border: "2px solid #333",
-    borderTop: 'none',
-    
   }
+
   return (
     <div style={borderStyles}>
       <h4 style={styles}>{props.title}</h4>
