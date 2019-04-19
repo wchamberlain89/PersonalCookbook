@@ -4,13 +4,13 @@ import SideNav from './SideNav/SideNav';
 import { Switch, Route } from 'react-router-dom';
 
 import Error404 from './Error404';
-import Welcome from './Welcome/WelcomeMain'
+import Welcome from './Welcome/WelcomeMain';
 
 function App(){
   return (
     <div>
-    <style jsx global>
-    {`
+      <style jsx global>
+        {`
       * {
         @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
         font-family: Nunito;
@@ -26,8 +26,8 @@ function App(){
         <Route component={Error404}/>
       </Switch>
 
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
-  export default App;
+export default App;

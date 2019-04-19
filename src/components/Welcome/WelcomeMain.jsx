@@ -5,7 +5,7 @@ function Welcome () {
     <div>
       <WelcomeMessage name='ward'/>
     </div>
-  )
+  );
 }
 
 export default Welcome;
