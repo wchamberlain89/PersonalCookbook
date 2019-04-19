@@ -4,12 +4,13 @@ import brookie from '../../../../assets/imgs/img1.jpg';
 
 function RecipeCardImg() {
   const styles = {
-    width: '100%'
+    width: '100%',
+    overflow: 'hidden',
   };
 
   return (
-    <div>
-      <img style={styles} src={brookie}/>
+    <div style={styles}>
+      <img  src={brookie} style={{width:'100%', borderRadius: '10px'}}/>
     </div>
   );
 }
