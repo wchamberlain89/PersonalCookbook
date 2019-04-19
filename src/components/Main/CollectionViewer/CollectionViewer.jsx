@@ -6,7 +6,11 @@ function CollectionViewer() {
     height : '100vh',
     width : '100%',
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    alignContent: 'flex-start',
+    padding: '0 5%',
+    margin: '0 auto'
   };
 
 
