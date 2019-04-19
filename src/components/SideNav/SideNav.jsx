@@ -9,7 +9,9 @@ function SideNav() {
     }
 
     return (
-      <nav style={styles}></nav>
+      <nav style={styles}>
+        
+      </nav>
     )
 }
 
