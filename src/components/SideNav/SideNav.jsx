@@ -1,5 +1,5 @@
 import React from 'react';
-import CollectionsMain from './CollectionsMain';
+import CollectionsMain from './CollectionsListMain';
 
 function SideNav() {
   const styles = {

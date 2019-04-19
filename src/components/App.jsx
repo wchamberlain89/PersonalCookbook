@@ -1,10 +1,11 @@
 import React from 'react';
-import SideNav from './SideNav/SideNav';
 
 import { Switch, Route } from 'react-router-dom';
-
 import Error404 from './Error404';
-import Welcome from './Welcome/WelcomeMain';
+
+import SideNav from './SideNav/SideNav';
+import Welcome from './Main/Welcome/Welcome';
+import CollectionViewer from './Main/CollectionViewer/CollectionViewer';
 
 function App(){
   return (
@@ -22,6 +23,7 @@ function App(){
       </style>
       <SideNav/>
       <Switch>
+        <Route path="/collections/viewAll" component={CollectionViewer}/>
         <Route exact path='/' component={Welcome}/>
         <Route component={Error404}/>
       </Switch>
