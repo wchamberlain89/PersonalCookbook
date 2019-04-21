@@ -4,11 +4,15 @@ import CollectionsList from './CollectionsList';
 import CollectionsListHeader from './CollectionsListHeader';
 
 function CollectionsMain() {
+  const styles = {
+    marginTop: '20px'
+  }
+
   return (
-    <section>
-      <CollectionsAdd/>
+    <section style={styles}>
       <CollectionsListHeader/>
       <CollectionsList/>
+      <CollectionsAdd/>
     </section>
   );
 }
