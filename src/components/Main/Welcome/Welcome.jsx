@@ -5,15 +5,22 @@ import backgroundImg from '../../../assets/imgs/welcomeBackground.jpg';
 function Welcome () {
   const styles = {
     width: '100%',
-    height: '100vw',
+    height: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    backgroundImage: 'url(' + backgroundImg + ')'
+    backgroundImage: 'url(' + backgroundImg + ')',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundBlendMode: 'multiply',
+    opacity: '0.6'
   };
   return (
-    <div style={styles}>
-      <WelcomeMessage name='ward'/>
+    <div style={{backgroundColor:"black", width: '100%'}}>
+      <div style={styles}>
+        <WelcomeMessage name='ward'/>
+      </div>
     </div>
+
   );
 }
 
