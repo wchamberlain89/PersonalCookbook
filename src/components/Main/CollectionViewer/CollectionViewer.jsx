@@ -11,13 +11,12 @@ function CollectionViewer() {
     alignContent: 'flex-start',
     padding: '0 20px',
     margin: '0 auto',
-    overflow: 'scroll'
   };
 
 
 
   return (
-    <div style={{width: "100%"}}>
+    <div style={{width: '100%', overflow: 'scroll'}}>
       <div style={styles}>
         <RecipeCard/>
         <RecipeCard/>
