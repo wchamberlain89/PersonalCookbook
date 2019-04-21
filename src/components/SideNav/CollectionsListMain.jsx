@@ -1,5 +1,5 @@
 import React from 'react';
-import CollectionsAddButton from './CollectionsAddButton';
+import NewCollectionControl from './NewCollectionControl';
 import CollectionsList from './CollectionsList';
 import CollectionsListHeader from './CollectionsListHeader';
 
@@ -11,7 +11,7 @@ function CollectionsMain() {
   return (
     <section style={styles}>
       <CollectionsListHeader/>
-      <CollectionsAddButton/>
+      <NewCollectionControl/>
       <CollectionsList/>
     </section>
   );
