@@ -6,7 +6,7 @@ import CollectionsListHeader from './CollectionsListHeader';
 function CollectionsMain() {
   const styles = {
     marginTop: '20px'
-  }
+  };
 
   return (
     <section style={styles}>

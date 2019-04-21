@@ -11,12 +11,12 @@ function RecipeCard() {
   };
   const innerStyles = {
     boxShadow: '0px 0px 1px 1px rgba(0,0,0,.15)'
-  }
+  };
 
   return (
     <div style={styles}>
-        <RecipeCardImg/>
-        <RecipeCardFooter title='Praline Brownies'/>
+      <RecipeCardImg/>
+      <RecipeCardFooter title='Praline Brownies'/>
     </div>
   );
 }

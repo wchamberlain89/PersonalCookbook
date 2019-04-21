@@ -7,8 +7,8 @@ function CollectionListHeader() {
     fontSize: '1.75em',
     fontWeight: '400',
     borderTop: '3px solid #ed1d25',
-    borderBottom: '3px solid #ed1d25'
-  }
+    color: '#DDD'
+  };
 
   return (
     <h3 style={styles}>Your Recipe Collections</h3>

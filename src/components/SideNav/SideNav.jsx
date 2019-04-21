@@ -5,9 +5,9 @@ function SideNav() {
   const styles = {
     width : '15vw',
     height : '100vh',
-    border : '1px solid black',
     float : 'left',
-    padding: '20px'
+    padding: '20px',
+    backgroundColor: '#63BF7A'
   };
 
   return (
