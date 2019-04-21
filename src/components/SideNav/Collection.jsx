@@ -15,15 +15,16 @@ function Collection(props) {
         {`
           li {
             position: relative;
-            padding: "10px 0px 10px 30px";
-            color: "black";
-            transition: transform .1s;
+            padding: 10px 0px 10px 10px;
+            color: #ddd;
+            transition: .1s;
+            list-style-type: none;
+
           }
 
           li:hover {
-            background-color: skyblue;
-            transform-origin: left center;
-            z-index: 10;
+            border-left: 3px solid #ed1d25;
+            padding-left: 20px;
           }
       `}
       </style>

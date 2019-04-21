@@ -11,8 +11,8 @@ function CollectionsMain() {
   return (
     <section style={styles}>
       <CollectionsListHeader/>
-      <CollectionsList/>
       <CollectionsAdd/>
+      <CollectionsList/>
     </section>
   );
 }

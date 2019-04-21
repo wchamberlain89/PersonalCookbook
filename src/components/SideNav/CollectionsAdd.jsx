@@ -11,8 +11,8 @@ function CollectionsAdd() {
   return (
     <Link to="/" style={{textDecoration: 'none'}}>
       <div style={styles}>
+        <span style={{ marginRight: '15px', fontSize: '1.3em'}}>New Collection</span>
         <img src={img} style={{width:'25px'}}/>
-        <span style={{color:'#DDD', marginLeft: '5px', fontSize: '1.3em'}}>New Collection</span>
       </div>
     </Link>
   );

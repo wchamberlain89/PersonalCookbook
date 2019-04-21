@@ -6,7 +6,6 @@ function CollectionListHeader() {
     textAlign: 'center',
     fontSize: '1.75em',
     fontWeight: '400',
-    borderTop: '3px solid #ed1d25',
     color: '#DDD'
   };
 

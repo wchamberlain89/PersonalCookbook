@@ -1,18 +1,21 @@
 import React from 'react';
 import CollectionsMain from './CollectionsListMain';
-import SideNavHeader from './SideNavHeader';
+import Logo from '../Logo';
 function SideNav() {
   const styles = {
-    width : '15vw',
+    width : '20vw',
+    minWidth: '150px',
     height : '100vh',
     float : 'left',
     padding: '20px',
-    backgroundColor: '#63BF7A'
+    backgroundColor: '#63BF7A',
+    boxShadow: '2px 1px 10px 2px rgba(0,0,0,.15)',
+    flexGrow: '1'
   };
 
   return (
     <nav style={styles}>
-      <SideNavHeader/>
+      <Logo/>
       <CollectionsMain/>
     </nav>
   );

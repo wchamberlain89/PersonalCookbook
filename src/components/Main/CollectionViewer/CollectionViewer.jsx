@@ -7,21 +7,24 @@ function CollectionViewer() {
     maxWidth : '1300px',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignContent: 'flex-start',
     padding: '0 20px',
-    margin: '0 auto'
+    margin: '0 auto',
+    overflow: 'scroll'
   };
 
 
 
   return (
-    <div style={styles}>
-      <RecipeCard/>
-      <RecipeCard/>
-      <RecipeCard/>
-      <RecipeCard/>
-      <RecipeCard/>
+    <div style={{width: "100%"}}>
+      <div style={styles}>
+        <RecipeCard/>
+        <RecipeCard/>
+        <RecipeCard/>
+        <RecipeCard/>
+        <RecipeCard/>
+      </div>
     </div>
   );
 }
