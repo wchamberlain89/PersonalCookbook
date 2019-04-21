@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import img from '../../assets/imgs/add.svg';
 
-function CollectionsAdd() {
+function CollectionsAddButton() {
   const styles = {
     display: 'flex',
     alignItems: 'center'
@@ -19,4 +19,4 @@ function CollectionsAdd() {
 }
 
 
-export default CollectionsAdd;
+export default CollectionsAddButton;
