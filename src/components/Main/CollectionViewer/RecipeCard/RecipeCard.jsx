@@ -6,8 +6,8 @@ function RecipeCard() {
   const styles = {
     display: 'flex',
     flexDirection: 'column',
-    width: '25%',
-    maxWidth: '25%'
+    width: '300px',
+    padding: '15px'
   };
   const innerStyles = {
     boxShadow: '0px 0px 1px 1px rgba(0,0,0,.15)'

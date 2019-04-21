@@ -4,12 +4,12 @@ import RecipeCard from './RecipeCard/RecipeCard';
 function CollectionViewer() {
   const styles = {
     height : '100vh',
-    width : '100%',
+    maxWidth : '1300px',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     alignContent: 'flex-start',
-    padding: '0 5%',
+    padding: '0 20px',
     margin: '0 auto'
   };
 
