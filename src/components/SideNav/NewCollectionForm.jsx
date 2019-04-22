@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function NewCollectionForm () {
+function NewCollectionForm (props) {
 
   let _name = null;
 
   function handleNewCollectionSubmit(event) {
     event.preventDefault();
-    console.log(_name);
+    props.onNewCollection({name: _name.value});
+    _name.value = '';
   }
 
   return (
@@ -18,5 +20,9 @@ function NewCollectionForm () {
     </form>
   );
 }
+
+NewCollectionForm.propTypes = {
+  onNewCollection: PropTypes.func
+};
 
 export default NewCollectionForm;

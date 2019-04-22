@@ -1,6 +1,7 @@
 import React from 'react';
 import CollectionsAddButton from './CollectionsAddButton';
 import NewCollectionForm from './NewCollectionForm';
+import PropTypes from 'prop-types';
 
 class NewCollectionControl extends React.Component {
   constructor(props) {
@@ -11,14 +12,14 @@ class NewCollectionControl extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick(props) {
     this.setState({formVisible: true});
   }
 
   render(){
     let content = null;
     if(this.state.formVisible) {
-      content = <NewCollectionForm/>;
+      content = <NewCollectionForm onNewCollection={this.props.onNewCollection}/>;
     } else {
       content = <CollectionsAddButton/>;
     }
@@ -29,5 +30,9 @@ class NewCollectionControl extends React.Component {
     );
   }
 }
+
+NewCollectionControl.propTypes = {
+  onNewCollection : PropTypes.func
+};
 
 export default NewCollectionControl;

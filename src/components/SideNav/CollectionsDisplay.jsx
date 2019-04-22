@@ -1,7 +1,8 @@
 import React from 'react';
 import Collection from './Collection';
+import PropTypes from 'prop-types';
 
-function CollectionsDisplay() {
+function CollectionsDisplay(props) {
   const collections = [
     {
       name: 'All Recipes'
@@ -17,12 +18,19 @@ function CollectionsDisplay() {
   return (
     <ul>
       {
-        collections.map((collection) =>
-          <Collection name={collection.name}/>
+        props.collectionList.map((collection,index) =>
+          <Collection
+           name={collection.name}
+           key={index}
+          />
         )
       }
     </ul>
   );
+}
+
+CollectionsDisplay.proptypes = {
+  collectionList : PropTypes.array
 }
 
 export default CollectionsDisplay;

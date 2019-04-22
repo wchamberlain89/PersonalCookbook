@@ -24,7 +24,7 @@ class CollectionsMain extends React.Component {
       <section style={this.styles}>
         <CollectionsListHeader/>
         <NewCollectionControl onNewCollection={this.handleAddingNewCollection} />
-        <CollectionsDisplay/>
+        <CollectionsDisplay collectionList={this.state.masterCollectionList}/>
       </section>
     );
   }
