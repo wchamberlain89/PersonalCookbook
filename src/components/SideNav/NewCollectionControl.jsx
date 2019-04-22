@@ -10,16 +10,21 @@ class NewCollectionControl extends React.Component {
       formVisible: false
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleResetVisibilty = this.handleResetVisibilty.bind(this);
   }
 
   handleClick(props) {
     this.setState({formVisible: true});
   }
 
+  handleResetVisibilty(props) {
+    this.setState({formVisible: false});
+  }
+
   render(){
     let content = null;
     if(this.state.formVisible) {
-      content = <NewCollectionForm onNewCollection={this.props.onNewCollection}/>;
+      content = <NewCollectionForm onNewCollection={this.props.onNewCollection} onResetVisibilty={this.handleResetVisibilty}/>;
     } else {
       content = <CollectionsAddButton/>;
     }

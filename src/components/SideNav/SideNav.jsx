@@ -17,6 +17,7 @@ function SideNav() {
     <nav style={styles}>
       <Logo/>
       <CollectionsMain/>
+      <CollectionsMain/>
     </nav>
   );
 }
