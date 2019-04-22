@@ -8,7 +8,7 @@ function Collection(props) {
     <Link to={`/collections/${props.id}`} style={{ textDecoration: 'none' }}>
 
       <li>
-        <span>{props.name}{props.id}</span>
+        <span>{props.name}</span>
       </li>
 
       <style jsx>

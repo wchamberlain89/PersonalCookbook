@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 function NewCollectionForm (props) {
 
@@ -7,7 +8,7 @@ function NewCollectionForm (props) {
 
   function handleNewCollectionSubmit(event) {
     event.preventDefault();
-    props.onNewCollection({name: _name.value, id: 1});
+    props.onNewCollection({name: _name.value, id: v4()});
     props.onResetVisibilty()
     _name.value = '';
   }

@@ -6,11 +6,11 @@ function CollectionsDisplay(props) {
   return (
     <ul>
       {
-        props.collectionList.map((collection,index) =>
+        props.collectionList.map((collection) =>
           <Collection
            name={collection.name}
            id={collection.id}
-           key={index}
+           key={collection.id}
           />
         )
       }
