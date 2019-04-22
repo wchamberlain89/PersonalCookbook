@@ -27,7 +27,7 @@ function App() {
 
         <SideNav/>
         <Switch>
-        <Route path="/collections/viewAll" component={CollectionViewer}/>
+        <Route path="/collections/:name" component={CollectionViewer}/>
         <Route exact path='/' component={Welcome}/>
         <Route component={Error404}/>
         </Switch>
@@ -35,6 +35,6 @@ function App() {
     </div>
       );
     }
-  
+
 
   export default App;

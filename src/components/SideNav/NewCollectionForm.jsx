@@ -7,7 +7,7 @@ function NewCollectionForm (props) {
 
   function handleNewCollectionSubmit(event) {
     event.preventDefault();
-    props.onNewCollection({name: _name.value});
+    props.onNewCollection({name: _name.value, id: 1});
     props.onResetVisibilty()
     _name.value = '';
   }

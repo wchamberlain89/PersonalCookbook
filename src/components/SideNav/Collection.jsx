@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 function Collection(props) {
 
   return (
-    <Link to="/collections/viewAll" style={{ textDecoration: 'none' }}>
+    <Link to={`/collections/${props.id}`} style={{ textDecoration: 'none' }}>
 
       <li>
-        <span>{props.name}</span>
+        <span>{props.name}{props.id}</span>
       </li>
 
       <style jsx>
@@ -34,7 +34,8 @@ function Collection(props) {
 }
 
 Collection.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string,
+  id: PropTypes.string
 };
 
 
