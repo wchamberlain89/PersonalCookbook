@@ -7,10 +7,10 @@ import SideNav from './SideNav/SideNav';
 import Welcome from './Main/Welcome/Welcome';
 import CollectionViewer from './Main/CollectionViewer/CollectionViewer';
 
-class App extends React.Component {
-  render() {
+function App() {
     return (
     <div style={{display: 'flex'}}>
+
       <style jsx global>
       {`
         * {
@@ -24,6 +24,7 @@ class App extends React.Component {
         }
       `}
       </style>
+
         <SideNav/>
         <Switch>
         <Route path="/collections/viewAll" component={CollectionViewer}/>
@@ -34,6 +35,6 @@ class App extends React.Component {
     </div>
       );
     }
-  }
+  
 
   export default App;

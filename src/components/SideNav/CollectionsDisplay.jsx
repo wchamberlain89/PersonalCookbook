@@ -20,7 +20,7 @@ function CollectionsDisplay() {
         collections.map((collection) =>
           <Collection name={collection.name}/>
         )
-    }
+      }
     </ul>
   );
 }
