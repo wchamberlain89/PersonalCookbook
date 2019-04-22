@@ -13,15 +13,14 @@ class NewCollectionControl extends React.Component {
 
   handleClick() {
     this.setState({formVisible: true});
-    console.log(`state set to ${this.state.formVisible}`);
   }
 
   render(){
     let content = null;
     if(this.state.formVisible) {
-      content = <NewCollectionForm/>
+      content = <NewCollectionForm/>;
     } else {
-      content = <CollectionsAddButton/>
+      content = <CollectionsAddButton/>;
     }
     return(
       <div onClick={this.handleClick}>

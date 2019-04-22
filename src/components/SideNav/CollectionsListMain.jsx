@@ -1,6 +1,6 @@
 import React from 'react';
 import NewCollectionControl from './NewCollectionControl';
-import CollectionsList from './CollectionsList';
+import CollectionsDisplay from './CollectionsDisplay';
 import CollectionsListHeader from './CollectionsListHeader';
 
 function CollectionsMain() {
@@ -12,7 +12,7 @@ function CollectionsMain() {
     <section style={styles}>
       <CollectionsListHeader/>
       <NewCollectionControl/>
-      <CollectionsList/>
+      <CollectionsDisplay/>
     </section>
   );
 }

@@ -16,7 +16,7 @@ function NewCollectionForm () {
         add
       </button>
     </form>
-  )
+  );
 }
 
 export default NewCollectionForm;

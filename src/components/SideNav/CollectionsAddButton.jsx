@@ -10,10 +10,10 @@ function CollectionsAddButton() {
 
   return (
     
-      <div style={styles}>
-        <span style={{ marginRight: '15px', fontSize: '1.2em'}}>New Collection</span>
-        <img src={img} style={{width:'25px'}}/>
-      </div>
+    <div style={styles}>
+      <span style={{ marginRight: '15px', fontSize: '1.2em'}}>New Collection</span>
+      <img src={img} style={{width:'25px'}}/>
+    </div>
 
   );
 }
