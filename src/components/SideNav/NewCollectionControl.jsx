@@ -12,7 +12,7 @@ class NewCollectionControl extends React.Component {
   }
 
   handleClick() {
-    this.setState({formVisible: !this.state.formVisible});
+    this.setState({formVisible: true});
     console.log(`state set to ${this.state.formVisible}`);
   }
 
