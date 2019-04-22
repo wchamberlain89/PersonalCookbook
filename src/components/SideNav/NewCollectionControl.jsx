@@ -1,5 +1,6 @@
 import React from 'react';
 import CollectionsAddButton from './CollectionsAddButton';
+import NewCollectionForm from './NewCollectionForm';
 
 class NewCollectionControl extends React.Component {
   constructor(props) {
@@ -16,11 +17,17 @@ class NewCollectionControl extends React.Component {
   }
 
   render(){
+    let content = null;
+    if(this.state.formVisible) {
+      content = <NewCollectionForm/>
+    } else {
+      content = <CollectionsAddButton/>
+    }
     return(
       <div onClick={this.handleClick}>
-        <CollectionsAddButton/>
+        {content}
       </div>
-    )
+    );
   }
 }
 

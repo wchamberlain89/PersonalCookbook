@@ -27,13 +27,13 @@ function Welcome () {
 
     backgroundColor: 'rgba(0,0,0,0.3)',
 
-  }
+  };
   return (
-      <div style={styles}>
-        <WelcomeMessage name='Ward'/>
-        <div style={overlay}>
-        </div>
+    <div style={styles}>
+      <WelcomeMessage name='Ward'/>
+      <div style={overlay}>
       </div>
+    </div>
 
   );
 }
