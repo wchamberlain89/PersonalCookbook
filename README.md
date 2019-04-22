@@ -16,9 +16,9 @@
     4. Navigate to LocalHost provided in terminal to view project
     
 ## Main Development -
-    [] Greet user with welcome screen.
-    [] Create new collections that store their own recipes.
-    [] Display a list of recipes By picture and name by selecting a collection.
+    [x] Greet user with welcome screen.
+    [x] Create new collections that store their own recipes.
+    [x] Display a list of recipes By picture and name by selecting a collection.
     [] Ability to add a new Recipe to a collection.
     [] View Page For the Individual Recipes.
     [] Edit Recipe Details from Recipe Component.
