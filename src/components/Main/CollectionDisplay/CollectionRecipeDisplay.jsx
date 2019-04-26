@@ -4,20 +4,23 @@ import PropTypes from 'prop-types';
 import AddRecipeButton from './AddRecipeControl/AddRecipeButton';
 function CollectionRecipeDisplay(props) {
   const styles = {
+    position: 'relative',
     height : '100vh',
     maxWidth : '1300px',
+
+    padding: '0 20px',
+    margin: '0 auto',
+
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'flex-start',
     alignContent: 'flex-start',
-    padding: '0 20px',
-    margin: '0 auto',
   };
 
 
 
   return (
-    <div style={{width: '100%', overflow: 'scroll'}}>
+    <div style={{width: '100%', overflow: 'scroll', position: 'relative'}}>
       <div style={styles}>
         {props.recipes.map( (recipe, index) => <RecipeCard name={recipe.name} img={recipe.img} key={index}/> )}
       </div>
