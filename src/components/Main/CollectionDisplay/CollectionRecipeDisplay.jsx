@@ -24,13 +24,14 @@ function CollectionRecipeDisplay(props) {
       <div style={styles}>
         {props.recipes.map( (recipe, index) => <RecipeCard name={recipe.name} img={recipe.img} key={index}/> )}
       </div>
-      <AddRecipeButton/>
+      <AddRecipeButton onAddingRecipe={props.onAddingRecipe}/>
     </div>
   );
 }
 
 CollectionRecipeDisplay.propTypes = {
-  recipes : PropTypes.array
+  recipes : PropTypes.array,
+  onAddingRecipe : PropTypes.func
 }
 
 export default CollectionRecipeDisplay;

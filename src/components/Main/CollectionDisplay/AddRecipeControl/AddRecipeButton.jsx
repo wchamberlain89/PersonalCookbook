@@ -1,4 +1,6 @@
 import React from 'react';
+import AddRecipeForm from './AddRecipeForm';
+import PropTypes from 'prop-types';
 
 class AddRecipeButton extends React.Component {
   constructor(props) {
@@ -14,10 +16,15 @@ class AddRecipeButton extends React.Component {
   }
 
   render() {
+    const form = this.state.isExpanded ? <AddRecipeForm onAddingRecipe={this.props.onAddingRecipe}/> : null;
+
     return(
       <div
       onClick={!this.state.isExpanded ? this.onClick : null}
       className={this.state.isExpanded ? 'isExpanded' : null}>
+
+        {/*Display for Form*/}
+        {form}
 
         <img src={require(`../../../../assets/imgs/add.png`)}
           onClick={this.state.isExpanded ? this.onClick : null}
@@ -77,6 +84,10 @@ class AddRecipeButton extends React.Component {
       </div>
     )
   }
+}
+
+AddRecipeButton.propTypes = {
+  onAddingRecipe : PropTypes.func
 }
 
 export default AddRecipeButton;

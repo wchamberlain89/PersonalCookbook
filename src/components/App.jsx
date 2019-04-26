@@ -18,6 +18,13 @@ class App extends React.Component {
         {name: "Cauliflower Pizza Dough", img: "img3.jpg"}
       ]
     }
+    this.HandleAddingNewRecipe = this.HandleAddingNewRecipe.bind(this);
+  }
+
+  HandleAddingNewRecipe(recipe) {
+    const recipes = this.state.recipes.slice();
+    recipes.push(recipe);
+    this.setState({recipes : recipes})
   }
 
   render(){
@@ -40,7 +47,13 @@ class App extends React.Component {
 
         <SideNav/>
         <Switch>
-        <Route path="/collection/:id" render={ (props) => <CollectionRecipeDisplay recipes={this.state.recipes}/> }/>
+        <Route path="/collection/:id"
+          render = { (props) =>
+            <CollectionRecipeDisplay
+              recipes={this.state.recipes}
+              onAddingRecipe={this.HandleAddingNewRecipe}
+              />
+          }/>
         <Route path="/recipe/:id" component={RecipeDisplay}/>
         <Route exact path='/' component={Welcome}/>
         <Route component={Error404}/>
