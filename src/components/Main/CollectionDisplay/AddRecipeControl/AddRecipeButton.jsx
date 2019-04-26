@@ -1,32 +1,55 @@
 import React from 'react';
 
-function AddRecipeButton() {
-  const buttonStyles = {
-    minWidth: '50px',
-    width: '5vw',
+class AddRecipeButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isExpanded : false
+    }
+    this.onClick = this.onClick.bind(this);
+  }
 
-    minHeight: '50px',
-    height: '5vw',
+  onClick() {
+    this.setState({isExpanded : !this.state.isExpanded});
+  }
 
-    position: 'absolute',
-    right: '5%',
-    bottom: '5%',
+  render() {
+    return(
+      <div
+      onClick={this.onClick}
+      className={this.state.isExpanded ? 'isExpanded' : null}>
+        <img src={require(`../../../../assets/imgs/add.png`)}/>
 
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+        <style jsx>
+        {`
+          div {
+            min-width: 50px;
+            width: 5vw;
 
-    borderRadius: '50%',
-    boxShadow: '2px 3px 12px 3px rgba(0,0,0,0.25)',
-    backgroundColor: 'red',
-}
+            min-height: 50px;
+            height: 5vw;
 
-return(
-  <div style={buttonStyles}>
-    <img src={require(`../../../../assets/imgs/add.png`)}/>
-  </div>
-)
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+            box-shadow: 2px 3px 12px 3px rgba(0,0,0,0.25);
+            background-color: red;
+          }
+          .isExpanded {
+            width: 100%;
+            height: 100%;
+          }
+          `}
+          </style>
+      </div>
+    )
+  }
 }
 
 export default AddRecipeButton;
