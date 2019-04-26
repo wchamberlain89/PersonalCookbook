@@ -22,7 +22,6 @@ function CollectionViewer() {
         <RecipeCard/>
         <RecipeCard/>
         <RecipeCard/>
-        <RecipeCard/>
       </div>
     </div>
   );
