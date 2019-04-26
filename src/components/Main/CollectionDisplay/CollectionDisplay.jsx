@@ -1,7 +1,7 @@
 import React from 'react';
 import RecipeCard from './RecipeCard/RecipeCard';
 
-function CollectionViewer() {
+function CollectionDisplay() {
   const styles = {
     height : '100vh',
     maxWidth : '1300px',
@@ -27,4 +27,4 @@ function CollectionViewer() {
   );
 }
 
-export default CollectionViewer;
+export default CollectionDisplay;
