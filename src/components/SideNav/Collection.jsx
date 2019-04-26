@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Collection(props) {
 
   return (
-    <Link to={`/collections/${props.id}`} style={{ textDecoration: 'none' }}>
+    <Link to={`/collection/${props.id}`} style={{ textDecoration: 'none' }}>
 
       <li>
         <span>{props.name}</span>

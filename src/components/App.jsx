@@ -5,7 +5,8 @@ import Error404 from './Error404';
 
 import SideNav from './SideNav/SideNav';
 import Welcome from './Main/Welcome/Welcome';
-import CollectionViewer from './Main/CollectionViewer/CollectionViewer';
+import CollectionDisplay from './Main/CollectionDisplay/CollectionDisplay';
+import RecipeDisplay from './Main/RecipeDisplay/RecipeDisplay';
 
 function App() {
     return (
@@ -27,7 +28,8 @@ function App() {
 
         <SideNav/>
         <Switch>
-        <Route path="/collections/:name" component={CollectionViewer}/>
+        <Route path="/collection/:id" component={CollectionDisplay}/>
+        <Route path="/recipe/:id" component={RecipeDisplay}/>
         <Route exact path='/' component={Welcome}/>
         <Route component={Error404}/>
         </Switch>
