@@ -1,7 +1,7 @@
 import React from 'react';
 import RecipeCard from './RecipeCard/RecipeCard';
 import PropTypes from 'prop-types';
-
+import AddRecipeButton from './AddRecipeControl/AddRecipeButton';
 function CollectionRecipeDisplay(props) {
   const styles = {
     height : '100vh',
@@ -21,6 +21,7 @@ function CollectionRecipeDisplay(props) {
       <div style={styles}>
         {props.recipes.map( (recipe, index) => <RecipeCard name={recipe.name} img={recipe.img} key={index}/> )}
       </div>
+      <AddRecipeButton/>
     </div>
   );
 }
