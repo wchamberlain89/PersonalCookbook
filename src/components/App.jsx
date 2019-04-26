@@ -5,10 +5,22 @@ import Error404 from './Error404';
 
 import SideNav from './SideNav/SideNav';
 import Welcome from './Main/Welcome/Welcome';
-import CollectionDisplay from './Main/CollectionDisplay/CollectionDisplay';
+import CollectionRecipeDisplay from './Main/CollectionDisplay/CollectionRecipeDisplay';
 import RecipeDisplay from './Main/RecipeDisplay/RecipeDisplay';
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      recipes : [
+        {name: "Praline Brookies", img: "img1.jpg"},
+        {name: "PB & J", img: "img2.jpg"},
+        {name: "Cauliflower Pizza Dough", img: "img3.jpg"}
+      ]
+    }
+  }
+
+  render(){
     return (
     <div style={{display: 'flex'}}>
 
@@ -28,7 +40,7 @@ function App() {
 
         <SideNav/>
         <Switch>
-        <Route path="/collection/:id" component={CollectionDisplay}/>
+        <Route path="/collection/:id" render={ (props) => <CollectionRecipeDisplay recipes={this.state.recipes}/> }/>
         <Route path="/recipe/:id" component={RecipeDisplay}/>
         <Route exact path='/' component={Welcome}/>
         <Route component={Error404}/>
@@ -36,7 +48,8 @@ function App() {
 
     </div>
       );
-    }
+  }
+}
 
 
   export default App;

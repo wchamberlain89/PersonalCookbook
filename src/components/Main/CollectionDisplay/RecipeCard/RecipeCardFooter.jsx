@@ -15,13 +15,13 @@ function RecipeCardFooter(props) {
 
   return (
     <div style={borderStyles}>
-      <h4 style={styles}>{props.title}</h4>
+      <h4 style={styles}>{props.name}</h4>
     </div>
   );
 }
 
 RecipeCardFooter.propTypes = {
-  title: PropTypes.string
+  name: PropTypes.string
 };
 
 export default RecipeCardFooter;

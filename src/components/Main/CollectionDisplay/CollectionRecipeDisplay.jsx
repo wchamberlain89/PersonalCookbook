@@ -1,7 +1,8 @@
 import React from 'react';
 import RecipeCard from './RecipeCard/RecipeCard';
+import PropTypes from 'prop-types';
 
-function CollectionDisplay() {
+function CollectionRecipeDisplay(props) {
   const styles = {
     height : '100vh',
     maxWidth : '1300px',
@@ -18,13 +19,14 @@ function CollectionDisplay() {
   return (
     <div style={{width: '100%', overflow: 'scroll'}}>
       <div style={styles}>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
+        {props.recipes.map( (recipe, index) => <RecipeCard name={recipe.name} img={recipe.img} key={index}/> )}
       </div>
     </div>
   );
 }
 
-export default CollectionDisplay;
+CollectionRecipeDisplay.propTypes = {
+  recipes : PropTypes.array
+}
+
+export default CollectionRecipeDisplay;

@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import brookie from '../../../../assets/imgs/img1.jpg';
 
-function RecipeCardImg() {
+
+function RecipeCardImg(props) {
   const styles = {
     overflow: 'hidden'
   };
 
   return (
     <div style={styles}>
-      <img  src={brookie} style={{width:'100%'}}/>
+      <img  src={require(`../../../../assets/imgs/${props.img}`)} style={{width:'100%'}}/>
     </div>
   );
 }
