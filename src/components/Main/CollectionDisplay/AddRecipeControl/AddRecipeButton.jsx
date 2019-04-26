@@ -16,9 +16,13 @@ class AddRecipeButton extends React.Component {
   render() {
     return(
       <div
-      onClick={this.onClick}
+      onClick={!this.state.isExpanded ? this.onClick : null}
       className={this.state.isExpanded ? 'isExpanded' : null}>
-        <img src={require(`../../../../assets/imgs/add.png`)}/>
+
+        <img src={require(`../../../../assets/imgs/add.png`)}
+          onClick={this.state.isExpanded ? this.onClick : null}
+          className={this.state.isExpanded ? 'isExpanded' : null}
+        />
 
         <style jsx>
         {`
@@ -41,10 +45,15 @@ class AddRecipeButton extends React.Component {
             box-shadow: 2px 3px 12px 3px rgba(0,0,0,0.25);
             background-color: red;
 
+            transition: .6s;
+          }
+
+          img {
+            transition-delay: 2s;
             transition: 1s;
           }
 
-          .isExpanded {
+          div.isExpanded {
             width: 100%;
             height: 100%;
 
@@ -53,6 +62,15 @@ class AddRecipeButton extends React.Component {
             right: 0;
             bottom: 0;
             z-index: 100;
+
+            box-shadow: none;
+          }
+
+          img.isExpanded {
+            position: fixed;
+            top: 2.5%;
+            right: 2.5%;
+            transform: rotate(495deg);
           }
           `}
           </style>
