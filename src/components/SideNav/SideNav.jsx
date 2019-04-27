@@ -5,12 +5,15 @@ function SideNav() {
   const styles = {
     width : '20vw',
     minWidth: '150px',
-    height : '100vh',
+    height : '99vh',
     float : 'left',
     padding: '20px',
     backgroundColor: '#63BF7A',
-    boxShadow: '2px 1px 10px 2px rgba(0,0,0,.15)',
-    flexGrow: '1'
+    boxShadow: '2px 0px 10px 2px rgba(0,0,0,.15)',
+    flexGrow: '1',
+    position: 'fixed',
+    left: '0',
+    top: '0'
   };
 
   return (

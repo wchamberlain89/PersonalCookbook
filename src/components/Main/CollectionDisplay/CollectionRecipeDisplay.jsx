@@ -5,22 +5,36 @@ import AddRecipeButton from './AddRecipeControl/AddRecipeButton';
 function CollectionRecipeDisplay(props) {
   const styles = {
     position: 'relative',
-    height : '100vh',
+    height : '99vh',
     maxWidth : '1300px',
 
     padding: '0 20px',
-    margin: '0 auto',
+    margin: '0 auto 0 20vw',
+
 
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'flex-start',
     alignContent: 'flex-start',
+
   };
 
 
 
   return (
-    <div style={{width: '100%', overflow: 'scroll', position: 'relative'}}>
+    <div classname="scrollHide" style={{width: '100%', position: 'relative'}}>
+      <style jsx>
+        {`
+          .scrollHide::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+          }
+          .scrollHide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `}
+      </style>
       <div style={styles}>
         {props.recipes.map( (recipe, index) => <RecipeCard name={recipe.name} img={recipe.img} key={index}/> )}
       </div>

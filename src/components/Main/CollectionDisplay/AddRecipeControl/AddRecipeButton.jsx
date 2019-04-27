@@ -40,7 +40,7 @@ class AddRecipeButton extends React.Component {
             min-height: 50px;
             height: 5vw;
 
-            position: absolute;
+            position: fixed;
             right: 5%;
             bottom: 5%;
 
