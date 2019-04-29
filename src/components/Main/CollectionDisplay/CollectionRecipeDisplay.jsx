@@ -1,7 +1,7 @@
 import React from 'react';
 import RecipeCard from './RecipeCard/RecipeCard';
 import PropTypes from 'prop-types';
-import AddRecipeButton from './AddRecipeControl/AddRecipeButton';
+import AddRecipeButton from './AddRecipeButton/AddRecipeButton';
 function CollectionRecipeDisplay(props) {
   const styles = {
     position: 'relative',
@@ -22,19 +22,7 @@ function CollectionRecipeDisplay(props) {
 
 
   return (
-    <div classname="scrollHide" style={{width: '100%', position: 'relative'}}>
-      <style jsx>
-        {`
-          .scrollHide::-webkit-scrollbar {
-            width: 0px;
-            background: transparent;
-          }
-          .scrollHide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-          }
-        `}
-      </style>
+    <div  style={{width: '100%', position: 'relative'}}>
       <div style={styles}>
         {props.recipes.map( (recipe, index) => <RecipeCard name={recipe.name} img={recipe.img} key={index}/> )}
       </div>
@@ -46,6 +34,6 @@ function CollectionRecipeDisplay(props) {
 CollectionRecipeDisplay.propTypes = {
   recipes : PropTypes.array,
   onAddingRecipe : PropTypes.func
-}
+};
 
 export default CollectionRecipeDisplay;

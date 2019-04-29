@@ -25,6 +25,6 @@ function RecipeCard(props) {
 RecipeCard.PropTypes = {
   name : PropTypes.string,
   img : PropTypes.string
-}
+};
 
 export default RecipeCard;

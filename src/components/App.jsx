@@ -13,56 +13,62 @@ class App extends React.Component {
     super(props);
     this.state = {
       recipes : [
-        {name: "Praline Brookies", img: "img1.jpg"},
-        {name: "PB & J", img: "img2.jpg"},
-        {name: "Cauliflower Pizza Dough", img: "img3.jpg"}
+        {name: 'Praline Brookies', img: 'img1.jpg'},
+        {name: 'PB & J', img: 'img2.jpg'},
+        {name: 'Cauliflower Pizza Dough', img: 'img3.jpg'}
       ]
-    }
+    };
     this.HandleAddingNewRecipe = this.HandleAddingNewRecipe.bind(this);
   }
 
   HandleAddingNewRecipe(recipe) {
     const recipes = this.state.recipes.slice();
     recipes.push(recipe);
-    this.setState({recipes : recipes})
+    this.setState({recipes : recipes});
   }
 
   render(){
     return (
-    <div style={{display: 'flex'}}>
+      <div style={{display: 'flex'}}>
 
-      <style jsx global>
-      {`
-        * {
-          @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
-          font-family: Nunito;
-          box-sizing : border-box;
-          margin: 0;
-          padding: 0;
-          font-size: 14px;
-          font-weight: 300;
-        }
-      `}
-      </style>
+        <style jsx global>
+          {`
+            * {
+              @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+              font-family: Nunito;
+              box-sizing : border-box;
+              margin: 0;
+              padding: 0;
+              font-size: 14px;
+              font-weight: 300;
+            }
+            .mainView {
+              width: 85vw;
+              margin-left: 15vw;
+              height: 100vh;
+            }
+          `}
+          </style>
 
         <SideNav/>
-        <Switch>
-        <Route path="/collection/:id"
-          render = { (props) =>
-            <CollectionRecipeDisplay
-              recipes={this.state.recipes}
-              onAddingRecipe={this.HandleAddingNewRecipe}
-              />
-          }/>
-        <Route path="/recipe/:id" component={RecipeDisplay}/>
-        <Route exact path='/' component={Welcome}/>
-        <Route component={Error404}/>
-        </Switch>
-
-    </div>
-      );
+      <div className="mainView">
+          <Switch>
+          <Route path="/collection/:id"
+            render={ (props) =>
+              <CollectionRecipeDisplay
+                recipes={this.state.recipes}
+                onAddingRecipe={this.HandleAddingNewRecipe}
+                />
+            }/>
+          <Route path="/recipe/:id" component={RecipeDisplay}/>
+          <Route exact path='/' component={Welcome}/>
+          <Route component={Error404}/>
+          </Switch>
+        </div>
+      </div>
+    );
   }
 }
 
 
-  export default App;
+export default App;

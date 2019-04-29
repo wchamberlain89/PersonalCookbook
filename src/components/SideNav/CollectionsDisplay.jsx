@@ -8,9 +8,9 @@ function CollectionsDisplay(props) {
       {
         props.collectionList.map((collection) =>
           <Collection
-           name={collection.name}
-           id={collection.id}
-           key={collection.id}
+            name={collection.name}
+            id={collection.id}
+            key={collection.id}
           />
         )
       }
@@ -21,6 +21,6 @@ function CollectionsDisplay(props) {
 
 CollectionsDisplay.proptypes = {
   collectionList : PropTypes.array
-}
+};
 
 export default CollectionsDisplay;

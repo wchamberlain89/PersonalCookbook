@@ -5,7 +5,7 @@ function AddRecipeForm(props) {
   let _name = null;
 
   function handleFormSubmit() {
-    props.onAddingRecipe({name: _name.value, img: 'img1.jpg'})
+    props.onAddingRecipe({name: _name.value, img: 'img1.jpg'});
   }
 
   return(
@@ -13,11 +13,11 @@ function AddRecipeForm(props) {
       <input type="text" ref={(input) => _name = input}/>
       <button type="submit">Add New Recipe</button>
     </form>
-  )
+  );
 }
 
 AddRecipeForm.propTypes = {
   onAddingRecipe: PropTypes.func
-}
+};
 
 export default AddRecipeForm;

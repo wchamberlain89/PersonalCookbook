@@ -3,9 +3,9 @@ import CollectionsMain from './CollectionsMain';
 import Logo from '../Logo';
 function SideNav() {
   const styles = {
-    width : '20vw',
-    minWidth: '150px',
-    height : '99vh',
+    width: '15vw',
+    minWidth: '200px',
+    height : '100vh',
     float : 'left',
     padding: '20px',
     backgroundColor: '#63BF7A',
@@ -13,7 +13,9 @@ function SideNav() {
     flexGrow: '1',
     position: 'fixed',
     left: '0',
-    top: '0'
+    top: '0',
+    bottom: '0',
+    zIndex: '5'
   };
 
   return (

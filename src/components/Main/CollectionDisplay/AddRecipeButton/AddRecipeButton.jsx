@@ -7,7 +7,7 @@ class AddRecipeButton extends React.Component {
     super(props);
     this.state = {
       isExpanded : false
-    }
+    };
     this.onClick = this.onClick.bind(this);
   }
 
@@ -20,19 +20,19 @@ class AddRecipeButton extends React.Component {
 
     return(
       <div
-      onClick={!this.state.isExpanded ? this.onClick : null}
-      className={this.state.isExpanded ? 'isExpanded' : null}>
+        onClick={!this.state.isExpanded ? this.onClick : null}
+        className={this.state.isExpanded ? 'isExpanded' : null}>
 
         {/*Display for Form*/}
         {form}
 
-        <img src={require(`../../../../assets/imgs/add.png`)}
+        <img src={require('../../../../assets/imgs/add.png')}
           onClick={this.state.isExpanded ? this.onClick : null}
           className={this.state.isExpanded ? 'isExpanded' : null}
         />
 
         <style jsx>
-        {`
+          {`
           div {
             min-width: 50px;
             width: 5vw;
@@ -52,7 +52,7 @@ class AddRecipeButton extends React.Component {
             box-shadow: 2px 3px 12px 3px rgba(0,0,0,0.25);
             background-color: red;
 
-            transition: .6s;
+            transition: .3s ease-out;
           }
 
           img {
@@ -80,14 +80,14 @@ class AddRecipeButton extends React.Component {
             transform: rotate(495deg);
           }
           `}
-          </style>
+        </style>
       </div>
-    )
+    );
   }
 }
 
 AddRecipeButton.propTypes = {
   onAddingRecipe : PropTypes.func
-}
+};
 
 export default AddRecipeButton;
